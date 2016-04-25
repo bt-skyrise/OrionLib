@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="OrionLib.IntegrationTests" GeneratedClassName="OrionTestSettings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SubscriptionAddress" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://localhost:6001/</Value>
+    </Setting>
+    <Setting Name="OrionAddress" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://orionhost:1026</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

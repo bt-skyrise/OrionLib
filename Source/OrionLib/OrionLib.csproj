@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DBDCC939-3717-4BD3-AEB9-052AED41D6D3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OrionLib</RootNamespace>
+    <AssemblyName>OrionLib</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="CommonContracts\ContextRequestDto.cs" />
+    <Compile Include="CommonContracts\GetMetadataDto.cs" />
+    <Compile Include="Communication\OrionRequestFactory.cs" />
+    <Compile Include="CreateOrUpdateEntity\CreateOrUpdateAttributeMetadataDto.cs" />
+    <Compile Include="CreateOrUpdateEntity\CreateOrUpdateEntityRequest.cs" />
+    <Compile Include="GetEntity\GetEntityRequest.cs" />
+    <Compile Include="GetEntity\TryGetEntityRequest.cs" />
+    <Compile Include="IOrion.cs" />
+    <Compile Include="QueryContext\OrionQuery.cs" />
+    <Compile Include="QueryContext\OrionQueryFactory.cs" />
+    <Compile Include="QueryContext\OrionQueryResult.cs" />
+    <Compile Include="QueryContext\QueryAttributes\EqualOrionQueryRestriction.cs" />
+    <Compile Include="QueryContext\QueryAttributes\IOrionQueryRestriction.cs" />
+    <Compile Include="QueryContext\QueryAttributes\NotEqualOrionQueryRestriction.cs" />
+    <Compile Include="QueryContext\QueryAttributes\OrionQueryRestrictionsCollection.cs" />
+    <Compile Include="QueryContext\QueryAttributes\StringOrionQueryRestriction.cs" />
+    <Compile Include="QueryContext\QueryContextRequest.cs" />
+    <Compile Include="QueryContext\QueryContextRequestFactory.cs" />
+    <Compile Include="QueryContext\QueryingAllEntities.cs" />
+    <Compile Include="QueryContext\QueryRestrictionDto.cs" />
+    <Compile Include="QueryContext\QueryRestrictionScopeDto.cs" />
+    <Compile Include="QueryContext\RestrictedQueryContextRequestDto.cs" />
+    <Compile Include="RemoveAttribute\RemoveAttributesRequest.cs" />
+    <Compile Include="RemoveEntity\RemoveEntityRequest.cs" />
+    <Compile Include="Subscribe\ContextSubscribing\SubscribeContextRequest.cs" />
+    <Compile Include="Subscribe\Creation\ISubscriptionFactory.cs" />
+    <Compile Include="Subscribe\Creation\OrionSubscriptionBuilder.cs" />
+    <Compile Include="Subscribe\Creation\SelfHostedSubscriptionFactory.cs" />
+    <Compile Include="Subscribe\Creation\SubscriptionFactory.cs" />
+    <Compile Include="Subscribe\EntityChanged.cs" />
+    <Compile Include="Subscribe\Notifying\OrionNotification.cs" />
+    <Compile Include="Subscribe\Notifying\OrionNotificationFactory.cs" />
+    <Compile Include="Subscribe\Renewing\SubscriptionRenewer.cs" />
+    <Compile Include="Subscribe\OrionSubscription.cs" />
+    <Compile Include="Subscribe\Management\OrionSubscriptionManager.cs" />
+    <Compile Include="Subscribe\SelfHosting\ISelfHostedOrionSubscription.cs" />
+    <Compile Include="Subscribe\SelfHosting\SelfHostedOrionSubscription.cs" />
+    <Compile Include="Subscribe\Renewing\UpdateSubscriptionRequest.cs" />
+    <Compile Include="Subscribe\SelfHosting\OwinSubscriptionListener.cs" />
+    <Compile Include="Subscribe\OrionSubscriptionConfiguration.cs" />
+    <Compile Include="CreateOrUpdateEntity\CreateOrUpdateAttributeDto.cs" />
+    <Compile Include="Subscribe\ContextSubscribing\SubscribeContextRequestDto.cs" />
+    <Compile Include="CommonContracts\EntityQueryDto.cs" />
+    <Compile Include="Subscribe\Notifying\NotifyConditionDto.cs" />
+    <Compile Include="QueryContext\QueryContextRequestDto.cs" />
+    <Compile Include="UpdateAttribute\UpdateAttributeRequest.cs" />
+    <Compile Include="UpdateAttribute\UpdateAttributeRequestDto.cs" />
+    <Compile Include="Subscribe\Renewing\UpdateSubscriptionRequestDto.cs" />
+    <Compile Include="OrionFactory.cs" />
+    <Compile Include="Communication\JsonNetSerializer.cs" />
+    <Compile Include="Communication\OrionResources.cs" />
+    <Compile Include="CreateOrUpdateEntity\CreateOrUpdateEntityRequestDto.cs" />
+    <Compile Include="Subscribe\ContextSubscribing\SubscribeContextResponseDto.cs" />
+    <Compile Include="Subscribe\ContextSubscribing\SubscribeResponseDto.cs" />
+    <Compile Include="Subscribe\Notifying\OrionNotificationDto.cs" />
+    <Compile Include="CommonContracts\ContextElementDto.cs" />
+    <Compile Include="CommonContracts\ContextResponseDto.cs" />
+    <Compile Include="QueryContext\QueryContextResponseDto.cs" />
+    <Compile Include="OrionEntity.cs" />
+    <Compile Include="OrionAttribute.cs" />
+    <Compile Include="GetEntity\GetEntityResponseDto.cs" />
+    <Compile Include="CommonContracts\GetAttributeDto.cs" />
+    <Compile Include="OrionConfiguration.cs" />
+    <Compile Include="OrionException.cs" />
+    <Compile Include="CommonContracts\OrionResponseDto.cs" />
+    <Compile Include="Communication\OrionRequest.cs" />
+    <Compile Include="Orion.cs" />
+    <Compile Include="CommonContracts\OrionStatusDto.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Subscribe\Renewing\RecurringTask.cs" />
+    <Compile Include="Subscribe\IOrionSubscription.cs" />
+    <Compile Include="Utils\TimeSpanExtensions.cs" />
+    <Compile Include="Utils\StreamExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Diagnostics">
+      <HintPath>..\packages\Microsoft.Owin.Diagnostics.3.0.1\lib\net45\Microsoft.Owin.Diagnostics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.HttpListener">
+      <HintPath>..\packages\Microsoft.Owin.Host.HttpListener.3.0.1\lib\net45\Microsoft.Owin.Host.HttpListener.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Hosting">
+      <HintPath>..\packages\Microsoft.Owin.Hosting.3.0.1\lib\net45\Microsoft.Owin.Hosting.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
