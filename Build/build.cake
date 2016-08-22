@@ -32,6 +32,8 @@ Task("Create-NuGet-Package")
     
     NuGetPack("../Source/OrionLib/OrionLib.csproj", new NuGetPackSettings 
     {
+        Authors = new[] {"Ryszard Tarajkowski, Damian Krychowski"},
+        Owners = new[] {"Parkanizer"},
         OutputDirectory = nugerPackagesOutputPath,
         Version = EnvironmentVariable("APPVEYOR_BUILD_VERSION"),
         IncludeReferencedProjects = true,
@@ -49,8 +51,6 @@ Task("Push-NuGet-Package")
     {
         NuGetPush(nugetPackage, new NuGetPushSettings
         {
-            Authors = new[] {"Ryszard Tarajkowski, Damian Krychowski"},
-            Owners = new[] {"Parkanizer"},
             Source = "https://nuget.org/",
             ApiKey = EnvironmentVariable("NUGET_API_KEY")
         });
